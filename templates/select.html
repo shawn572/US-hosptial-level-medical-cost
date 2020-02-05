@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Diagnosis Cost">
+        <meta name="author" content="@Shawn">
+        <title>Diagnosis Cost in USA</title>
+           
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+           
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://d14fo0winaifog.cloudfront.net/plotly-basic.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <head>
+
+  <body>
+  
+     <div class="navbar navbar-inverse navbar-fixed-top">
+       <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">Patients' payment for different diagnoses in USA</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://github.com/shawn572/Capstone_TDI">Github</a></li>
+              <li><a href="https://www.heroku.com/">Heroku</a></li>
+            </ul>
+          </div>
+            <!--/.nav-collapse -->
+        </div>
+      </div>
+        <br/><br/><br/>
+  
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-left">
+        <h2>Please select the diagnosis that has the closest description to yours</h2>
+          <form class='selectdiag' name='diagnosis' method='post' action='/plot'>
+            <br/>
+            <select type="text" name="diagnosis" class="selectpicker" data-dropup-auto="false">
+                {% for diag in diag_list2 %}
+                <option value= "{{diag}}" SELECTED>{{diag}}</option>"
+                {% endfor %}
+                <option value="" selected disabled hidden>Choose here</option>
+            </select>
+            <input class="btn" type="submit" value="Submit">
+            </form>
+          <br/><br/><br/><br/><br/><br/><br/><br/>
+          <p> MV: Mechanical Ventilation<p>
+          <p> MCC: Major Complication and Comorbidity<p>
+          <P> CC: Complication or Comorbidity<p>
+          <p> W: With<p>
+          <p> W/O: WithOut<p>
+        </div>
+      </div>
+    </div>
+   </div>
+    
+    <ol class="breadcrumb">
+    <div class="container">
+      <div class=""><a href="\">Home</a></div>
+    </div>
+    </ol>
+    
+      
+    </div>
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
