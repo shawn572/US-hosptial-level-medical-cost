@@ -8,3 +8,4 @@ simplejson
 sodapy
 plotly
 sklearn
+numpy
