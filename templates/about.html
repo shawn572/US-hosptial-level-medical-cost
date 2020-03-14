@@ -1,26 +1,73 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Skeleton application demoing Heroku and Flask integration.">
-    <meta name="author" content="@Shawn">
-    <!-- <link rel="icon" href="favicon.ico"> -->
 
-    <title>Shawn-flask-demo</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Diagnosis Cost">
+        <meta name="author" content="@Shawn">
+        <title>Diagnosis Cost in USA</title>
+           
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+           
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://d14fo0winaifog.cloudfront.net/plotly-basic.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <head>
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  </head>
   <body>
+  
+     <div class="navbar navbar-inverse navbar-fixed-top">
+       <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">Patients' payment for different diagnoses in USA</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://github.com/shawn572/Capstone_TDI">Github</a></li>
+              <li><a href="https://www.heroku.com/">Heroku</a></li>
+            </ul>
+          </div>
+            <!--/.nav-collapse -->
+        </div>
+      </div>
+        <br/><br/><br/>
+  
+  <div class="jumbotron">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-left">
-          <h2>Cannot find the stock ticker</h2>
-          <p><a href="/">Back</a></p>
+          <p> All the hospital level data are from data.cms.gov, which are based
+          on Inpatient Public Use File for Medicare. The total number of hosptials
+          included is more than 3000. The data were updated on Aug 2019 and covers
+          Fiscal Year 2017.<p>
+          <p> A state level map of average cost for different diagnosis is showed 
+          in order to potentially help patients to determine the ideal location to have treatment. 
+          The K-means algorithm is utilized here to further categorize hospitals
+          into three clusters. Despite the factor that patients might have different
+          insurance providers and plans, this project aims to help people, especially 
+          those don't have health insurance, to make better decisions when seeking 
+          treatment from hosptials.<p>
         </div>
       </div>
     </div>
+   </div>
+    
+    <ol class="breadcrumb">
+    <div class="container">
+      <div class=""><a href="\">Home</a></div>
+    </div>
+    </ol>
+    
+      
+    </div>
+    
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
