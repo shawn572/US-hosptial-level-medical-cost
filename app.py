@@ -199,4 +199,5 @@ def get_div(diag_gd):
     return div_gd
 
 if __name__ == '__main__':
- app.run(port=33507)
+    app.run(port=33514,debug=True)
+#  app.run(port=33507)
