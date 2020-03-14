@@ -18,6 +18,7 @@ mytoken = "mlLXY32tr9taoGa3UB9P12kdj"
 client = Socrata("data.cms.gov", mytoken, username="lixiangan05572@gmail.com", password="A4HxtN2wUbvcUqR")
 r = client.get("tcsp-6e99", limit=20000000)
 data = DataFrame(r)
+data = data[['drg_definition','average_total_payments','average_covered_charges','provider_name','provider_state','total_discharges']]
 data_drggroup = data.groupby('drg_definition')
 
 @app.route('/',methods=['GET','POST'])
@@ -199,4 +200,5 @@ def get_div(diag_gd):
     return div_gd
 
 if __name__ == '__main__':
- app.run(port=33507)
+    app.run(port=33514,debug=True)
+#    app.run(port=33507)
